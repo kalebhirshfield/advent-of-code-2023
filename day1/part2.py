@@ -18,16 +18,30 @@ def main():
 
     for line in lines:
         digits = ""
-        for key in string_to_digit.keys():
-            if key in line:
-                digits += str(string_to_digit[key])
+
+        print(f"original line: {line}")
+
+        for i in range(len(string_to_digit)):
+            line = line.replace(
+                list(string_to_digit.keys())[i],
+                str(list(string_to_digit.values())[i]),
+            )
+
+        print(f"new line: {line}")
+
         for letter in line:
-            if letter in string_to_digit.keys():
+            if letter.isnumeric():
                 digits += letter
+
         digit1 = digits[0]
         digit2 = digits[-1]
         num = int(digit1 + digit2)
+
+        print(f"num: {num}")
+
         total += num
+
+        print(f"total: {total}")
 
     return total
 
