@@ -3,26 +3,20 @@ def main():
     lines = file.readlines()
     total = 0
 
-    string_to_digit = {
-        "one": "o1e",
-        "two": "t2o",
-        "three": "t3e",
-        "four": "f4r",
-        "five": "f5v",
-        "six": "s6x",
-        "seven": "s7n",
-        "eight": "e8t",
-        "nine": "n9e",
-    }
-
     for line in lines:
         digits = ""
 
-        for i in range(len(string_to_digit)):
-            line = line.replace(
-                list(string_to_digit.keys())[i],
-                str(list(string_to_digit.values())[i]),
-            )
+        line = (
+            line.replace("one", "o1e")
+            .replace("two", "t2o")
+            .replace("three", "t3e")
+            .replace("four", "f4r")
+            .replace("five", "f5v")
+            .replace("six", "s6x")
+            .replace("seven", "s7n")
+            .replace("eight", "e8t")
+            .replace("nine", "n9e")
+        )
 
         for letter in line:
             if letter.isdigit():
