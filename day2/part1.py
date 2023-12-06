@@ -41,7 +41,7 @@ def main():
         if int(max(red)) <= 12 and int(max(green)) <= 13 and int(max(blue)) <= 14:
             allowed_games.append(lines.index(original_line) + 1)
 
-        total = sum(allowed_games)
+    total = sum(allowed_games)
 
     return total
 
