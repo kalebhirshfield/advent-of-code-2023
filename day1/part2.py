@@ -4,21 +4,18 @@ def main():
     total = 0
 
     string_to_digit = {
-        "zero": 0,
-        "one": 1,
-        "two": 2,
-        "three": 3,
-        "four": 4,
-        "five": 5,
-        "six": 6,
-        "seven": 7,
-        "eight": 8,
-        "nine": 9,
+        "one": "o1e",
+        "two": "t2o",
+        "three": "t3e",
+        "four": "f4r",
+        "five": "f5v",
+        "six": "s6x",
+        "seven": "s7n",
+        "eight": "e8t",
+        "nine": "n9e",
     }
 
     for line in lines:
-        print(f"Original Line: {line}")
-
         digits = ""
 
         for i in range(len(string_to_digit)):
@@ -27,19 +24,13 @@ def main():
                 str(list(string_to_digit.values())[i]),
             )
 
-        print(f"New Line: {line}")
-
         for letter in line:
             if letter.isdigit():
                 digits += letter
 
         digit1 = digits[0]
         digit2 = digits[-1]
-
         num = int(digit1 + digit2)
-
-        print(f"Number: {num}")
-
         total += num
 
     return total

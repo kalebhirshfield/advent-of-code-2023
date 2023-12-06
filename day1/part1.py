@@ -5,9 +5,11 @@ def main():
 
     for line in lines:
         digits = ""
+
         for letter in line:
             if letter.isnumeric():
                 digits += letter
+
         digit1 = digits[0]
         digit2 = digits[-1]
         num = int(digit1 + digit2)
