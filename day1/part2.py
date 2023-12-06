@@ -17,6 +17,8 @@ def main():
     }
 
     for line in lines:
+        print(f"Original Line: {line}")
+
         digits = ""
 
         for i in range(len(string_to_digit)):
@@ -24,6 +26,8 @@ def main():
                 list(string_to_digit.keys())[i],
                 str(list(string_to_digit.values())[i]),
             )
+
+        print(f"New Line: {line}")
 
         for letter in line:
             if letter.isdigit():
@@ -33,6 +37,8 @@ def main():
         digit2 = digits[-1]
 
         num = int(digit1 + digit2)
+
+        print(f"Number: {num}")
 
         total += num
 
