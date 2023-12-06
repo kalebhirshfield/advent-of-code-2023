@@ -8,11 +8,7 @@ def main():
         line = line.split(":")
         line.remove(line[0])
         line = "".join(line)
-        line = line.split(";")
-        line = ",".join(line)
-        line = line.replace(" ", "")
-        line = line.replace("\n", "")
-        line = line.split(",")
+        line = line.replace(";", ",").replace(" ", "").replace("\n", "").split(",")
 
         red = []
         green = []
